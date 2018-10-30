@@ -6,7 +6,7 @@ steps:
   args: ['login','-u','anmolku','-p','Anmol@1996']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'anmolku/django-app:1.0.$BUILD_ID']
-- name: gcr.io/cloud-builders/gsutil
+- name: 'gcr.io/cloud-builders/gsutil'
   args: ['cp','-r','static/*','gs://demo-asset']
 - name: 'gcr.io/cloud-builders/kubectl'
   args: ['rolling-update','app-orange','--image','anmolku/django-app:1.0.$BUILD_ID']
