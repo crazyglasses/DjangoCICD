@@ -12,8 +12,8 @@ steps:
   args: 
   - rolling-update
   - app-orange
-  - image
-  - web=anmolku/django-app:1.0.$BUILD_ID
+  - --image
+  - anmolku/django-app:1.0.$BUILD_ID
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-b'
   - 'CLOUDSDK_CONTAINER_CLUSTER=django-cloud-build'
