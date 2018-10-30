@@ -12,16 +12,15 @@
       {% if user.is_authenticated %}
       <a href="{% url "post_new" %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
       {% endif %}
-      <h1><a href="/">Django Sample app to demo CI CD </a> &mdash; {{ pod_name }}</h1>
+      <h3><a href="/">Django Sample app to demo CI CD. Current pod name :  </a> &mdash; {{ pod_name }}</h3>
     </div>
     <div class="content container">
       <div class="row">
 	<div class="col-md-8">
-	  {% block content %}
-                <form action="{% url "selfdestruct" %}" method="post">
-  	        <button type="submit" formmethod="post">KILL  THIS POD </button>
-		</form>
-          {% endblock %}
+		<form action="{% url "selfdestruct" %}" method="post">
+                <button type="submit" formmethod="post">KILL  THIS POD </button>
+                </form>
+	 
         </div>
       </div>
     </div>
