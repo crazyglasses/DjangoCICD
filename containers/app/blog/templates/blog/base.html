@@ -6,6 +6,16 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{% static "css/blog.css" %}">
+    <style>
+ 	a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+    </syle>
   </head>
   <body>
     <div class="page-header">
@@ -17,10 +27,7 @@
     <div class="content container">
       <div class="row">
 	<div class="col-md-8">
-		<form action="{% url "selfdestruct" %}" method="post">
-                <button type="submit" formmethod="post">KILL  THIS POD </button>
-                </form>
-	 
+	<a href="{% url "selfdestruct" %}" class="button" >KILL  THIS POD </a>
         </div>
       </div>
     </div>
