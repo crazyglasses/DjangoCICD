@@ -7,7 +7,7 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'anmolku/django-app:1.0.$BUILD_ID']
 - name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp','-r','static/*','gs://demo-asset']
+  args: ['cp','-r','containers/app/blog/static/*','gs://demo-asset']
 - name: 'gcr.io/cloud-builders/kubectl'
   args: 
   - rolling-update
