@@ -3,7 +3,9 @@ steps:
   args: ['build', '-t', 'anmolku/django-app:1.0.$BUILD_ID', 'containers/app/']
   timeout: 280s
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'anmolku/django-app:1.0.$BUILD_ID','-u','anmolku','-p','Anmol@1996']
+  args: ['login','-u','anmolku','-p','Anmol@1996']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'anmolku/django-app:1.0.$BUILD_ID']
 - name: 'gcr.io/cloud-builders/kubectl'
   args:
    - set
