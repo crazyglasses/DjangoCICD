@@ -9,7 +9,7 @@ steps:
 - name: 'gcr.io/cloud-builders/gsutil'
   args: ['cp','-r','static/*','gs://demo-asset']
 - name: 'gcr.io/cloud-builders/kubectl'
-  args: ['rolling-update','app-orange','--image','anmolku/django-app:1.0.$BUILD_ID']
+  args: 
   - rolling-update
   - app-orange
   - image
