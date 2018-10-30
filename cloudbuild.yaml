@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'anmolku/django-app:1.0.$BUILD_ID', '/containers/app/']
+  args: ['build', '-t', 'anmolku/django-app:1.0.$BUILD_ID', 'containers/app/']
   timeout: 280s
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'anmolku/django-app:1.0.$BUILD_ID','-u','anmolku','-p','Anmol@1996']
